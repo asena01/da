@@ -22,7 +22,7 @@
     <div ng-show="mode=='quiz'">
         <div ng-repeat="question in filteredQuestions">
             <div class="label label-warning">Question {{currentPage}} of {{totalItems}}.</div>
-            <div class="question">
+            <div class="container-fluid">
                 <h2>{{currentPage}}. {{question.Name}}</h2>
                 <div class="options">
                     <div ng-repeat="option in question.Options">

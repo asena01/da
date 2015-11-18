@@ -40,21 +40,96 @@ h1{
     font-size:26px;
     font-weight:normal;
 }
+h3{
+    font-size:36px;
+    font-weight:600;
+    color: white;
+}
+h4{
+    font-size:30px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 600;
+    
+    
+}
+
+.hborder{
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+
+}
+.white-gradient {
+    position: relative;
+    }
+ .white-gradient:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+            background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background:     -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background:      -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background:         linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
 h2{
-    font-size:20px;
-    font-weight:normal;
+    font-size:34px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+    
 }
 
 hr{
     border:none;
-    border-top:1px solid #ccc;
+    border-top:2px solid #ccc;
     background:none;
-    margin-bottom:2px;
+    margin:10px 20px 2px 2px;
+    width: 100%;
 }
+
 p {
    font-size:30px; 
     text-shadow: #444 0 1px 1px;
 }
+/* SQUARED ONE */
+.bgtr{
+    background: rgba(242,246,248,1);
+    background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 63%, rgba(224,239,249,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,1)), color-stop(51%, rgba(181,198,208,1)), color-stop(63%, rgba(216,225,231,1)), color-stop(100%, rgba(224,239,249,1)));
+    background: -webkit-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 63%, rgba(224,239,249,1) 100%);
+    background: -o-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 63%, rgba(224,239,249,1) 100%);
+    background: -ms-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 63%, rgba(224,239,249,1) 100%);
+    background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 63%, rgba(224,239,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+ 
+    
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+.bgg{
+    border: 2px solid;
+    padding: 10px;
+    background: #dddddd;
+    border-bottom-left-radius: 2em;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
+/*end of square one*/
+
 .header-right{
     padding-top:12px;
     text-align:right;
@@ -68,15 +143,16 @@ p {
 }
 
 .question{
-    background-color:#eee;
+    
     color:#151569;
     min-height:300px;
     padding:6px;
     text-align:center;
 }
 .question h2{
-    font-size:26px;
+    font-size:22px;
     font-weight:normal;
+
 }
 
 #quiz .options {
@@ -88,19 +164,27 @@ p {
     display:inline-block;
 }
     #quiz .options > div > label {
-        background-color: #d0def6;
+        background-color: #e7a61a;
         color: #224;
         cursor: pointer;
         display: block;
-        font-family: 'Segoe UI', Calibri, Arial;
-        font-weight:600;
+        font-family:  Arial;
+        font-weight:normal;
         margin: 5px;
         text-align: left;
-        font-size: 20px;
+        font-size: 18px;
         margin: 10px;
         min-width: 350px;
         padding: 10px 15px;
         vertical-align: middle;
+       
+
+       border:1px solid #666666;
+  border-radius: 15px;
+-moz-border-radius :15px;
+  -webkit-border-radius: 15px;
+  padding: 5px;
+    
     }
 
     #quiz .options input[type=checkbox] {
@@ -111,7 +195,7 @@ p {
     }
 
     .quizNav {
-        margin:auto;
+        margin:20px 2px 2px 2px;;
         text-align:center;
     }
     .quizNav ul{

@@ -2,24 +2,40 @@
 <div class="header">
     <div class="row">
         <div class="col-md-8">
-            <h2>Quiz Application</h2>
+            <h3 class="hborder">Quiz Application</h3>
         </div>
         <div class="col-md-4 header-right">
             <!-- In actual application, you may wish to load the quiz List using angular service. -->
             Select Quiz: 
-            <select id="quizList" ng-model="quizName" ng-change="loadQuiz(quizName)">
+            <select ng-model="quizName" ng-change="loadQuiz(quizName)">
                 <option value="data/aspnet.js">Asp.Net</option>
                 <option value="data/csharp.js">C Sharp</option>
                 <option value="data/designPatterns.js">Design Patterns</option>
             </select>
+         <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                    <li><button ng-click="loadQuiz('data/designPatterns.js')">Design p</button></li>
+                    <li><a href="#">Another action</a></li>
+              </ul>
+              
+         </div>
+</div>
+</body>
+</html>                                     
+              
         </div>
     </div>
     <hr />
+    </hr1>
 </div>
-<div id="quiz">
-    <h1 class="center">{{quiz.name}}</h1>
-    <hr />
+<div id="quiz" class="container-fluid">
+    <h4 class="center white-gradient">{{quiz.name}}</h4>
+    
+
     <div ng-show="mode=='quiz'">
+    <div class="row">
+    <div class="col-md-12 bgtr" >
         <div ng-repeat="question in filteredQuestions">
             <div class="label label-warning">Question {{currentPage}} of {{totalItems}}.</div>
             <div class="question">
@@ -34,13 +50,14 @@
                 </div>
             </div>
         </div>
-        <hr />
+    </div>
+    </div>
         <div class="quizNav">
             <div>
-                <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(1);">First</button>
-                <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(currentPage - 1);">Prev</button>
-                <button class="btn btn-primary"                            ng-click="goTo(currentPage + 1);">Next</button>
-                <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(totalItems);">Last</button>
+                <button class="btn btn-info btn-lg" ng-show="config.allowBack" ng-click="goTo(1);">First</button>
+                <button class="btn btn-info btn-lg" ng-show="config.allowBack" ng-click="goTo(currentPage - 1);">Prev</button>
+                <button class="btn btn-info btn-lg"                            ng-click="goTo(currentPage + 1);">Next</button>
+                <button class="btn btn-info btn-lg" ng-show="config.allowBack" ng-click="goTo(totalItems);">Last</button>
             </div>
             <br />
             <pagination ng-show="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>
@@ -71,8 +88,8 @@
     </div>
     <hr />
     <div class="" ng-show="mode!='result'">
-        <button class="btn btn-default" ng-click="mode = 'quiz'">Quiz</button> 
-        <button class="btn btn-default" ng-click="mode = 'review'">Review</button> 
-        <button class="btn btn-default" ng-click="onSubmit();">Submit Quiz</button>
+        <button class="btn btn-primary btn-lg" ng-click="mode = 'quiz'">Quiz</button> 
+        <button class="btn btn-primary btn-lg" ng-click="mode = 'review'">Review</button> 
+        <button class="btn btn-primary btn-lg" ng-click="onSubmit();">Submit Quiz</button>
     </div>
 </div>
